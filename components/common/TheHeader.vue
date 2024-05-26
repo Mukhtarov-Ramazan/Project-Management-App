@@ -1,5 +1,17 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 
+
+interface IMenuItem {
+    label: string,
+    path: string,
+}
+const items = ref<IMenuItem[]>([
+    {
+        label: 'Тест 1',
+        path: '/home'
+    },
+])
 </script>
 
 <template>
