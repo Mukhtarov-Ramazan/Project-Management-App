@@ -1,17 +1,19 @@
 <script setup lang="ts">
+import TasksLayouts from "~/components/pages/tasks/TasksLayouts.vue";
 
+const element = 21;
+
+const Element = 23;
 </script>
 
 <template>
-  <div class="MainPage">
-    <TheHeader/>
-    <h1>Это мой новый тестовый проект по изучению Nuxt3 и TypeScript</h1>
-  </div>
+	<div class="TasksPage">
+		<TasksLayouts />
+	</div>
 </template>
 
-
-<style scoped>
-h1 {
-  font-size: 3.2rem;
+<style scoped lang="scss">
+.TasksPage {
+	height: 100%;
 }
 </style>

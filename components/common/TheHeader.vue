@@ -1,15 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-
 
 interface IMenuItem {
     label: string,
     path: string,
 }
-const items = ref<IMenuItem[]>([
+const menu = ref<IMenuItem[]>([
     {
-        label: 'Тест 1',
-        path: '/home'
+        label: 'Задачи',
+        path: '/'
     },
 ])
 </script>
@@ -18,11 +16,12 @@ const items = ref<IMenuItem[]>([
     <div class="TheHeader">
         <nav class="nav">
             <NuxtLink
-                v-for="item in 4"
-                :key="item"
+                v-for="(item, index) in menu"
+                :key="index"
+                :to="item.path"
                 class="item"
             >
-                Пункт {{ item }}
+                {{ item.label }}
             </NuxtLink>
         </nav>
 
